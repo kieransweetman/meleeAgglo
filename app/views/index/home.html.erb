@@ -8,9 +8,13 @@
         <li>
           <h2><%= character.name %></h2>
           <p><%= character.description %></p>
-          <img src="<%= character.icon_url %>" alt="<%= character.name %> icon">
+          <% if character.icon_url == nil %>
+            <p>no image found</p>
+          <% end %>
+           <p><%=character.icon_url %> </p>
+           <img src="<%=character.icon_url%>" alt="">
         </li>
-      <% end %>
+        <% end %>
     </ul>
 
 </div>
