@@ -1,0 +1,9 @@
+{
+    "rubyLsp.indexing": {
+      "excludedPatterns": ["**/test/**.rb"],
+      "excludedGems": ["rubocop", "rubocop-performance"],
+      "includedPatterns": ["rake"],
+      "excludedMagicComments": ["compiled:true"]
+    },
+    "ruby lsp.trace.server": "verbose"
+  }
