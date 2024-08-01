@@ -2,19 +2,4 @@
 <div class="text-red-700">
     <h1>Welcome to MeleeAgglo</h1>
     <p>This is your custom welcome page.</p>
-
-    <ul>
-      <% @characters.each do |character| %>
-        <li>
-          <h2><%= character.name %></h2>
-          <p><%= character.description %></p>
-          <% if character.icon_url == nil %>
-            <p>no image found</p>
-          <% end %>
-           <p><%=character.icon_url %> </p>
-           <img src="<%=character.icon_url%>" alt="">
-        </li>
-        <% end %>
-    </ul>
-
 </div>

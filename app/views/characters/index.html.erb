@@ -1,0 +1,12 @@
+<section >
+<% @characters_by_row.each do |row| %>
+  <div class="flex flex-row mb-4 flex-shrink-0">
+    <% row.each do |character| %>
+    <% next if character.name == 'Sheik' %>
+      <div class="h-[56px]">
+        <%= image_tag character_image_path(character.name) %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+</section>

@@ -33,13 +33,16 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # debug
+  config.assets.debug = true
+
+  # checking for asset precompilation
+  config.assets.check_precompiled_asset = false
+
   # serve static files
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   ## Enable asset compilation
-  config.assets.compile = true
-
-  # Enable asset compilation
   config.assets.compile = true
 
   # Store uploaded files on the local file system (see config/storage.yml for options).

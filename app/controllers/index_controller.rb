@@ -1,5 +1,5 @@
 class IndexController < ApplicationController
-  def home
-    @characters = Character.all
-  end
+  # def home
+  #   @characters = Character.all
+  # end
 end
