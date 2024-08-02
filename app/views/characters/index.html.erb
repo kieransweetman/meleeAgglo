@@ -1,12 +1,15 @@
-<section >
-<% @characters_by_row.each do |row| %>
-  <div class="flex flex-row mb-4 flex-shrink-0">
-    <% row.each do |character| %>
-    <% next if character.name == 'Sheik' %>
-      <div class="h-[56px]">
-        <%= image_tag character_image_path(character.name) %>
+
+  <section>
+    <% @characters_by_row.each do |row| %>
+      <div class="flex flex-row mb-8">
+        <% row.each do |character| %>
+        <% next if character.name == 'Sheik' %>
+          <div id="<%= character.name %>" class="flex-grow border hover:border-red-500">
+            <a href="<%= character_path(character.name) %>" data-turbo="false">
+              <%= image_tag character_image_path(character.name) %>
+            </a>
+          </div>
+        <% end %>
       </div>
     <% end %>
-  </div>
-<% end %>
-</section>
+  </section>

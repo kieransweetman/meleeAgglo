@@ -16,4 +16,8 @@ module ApplicationHelper
       Rails.application.assets.find_asset(path).present?
     end
   end
+
+  def character_path(name)
+    "/characters/#{name}"
+  end
 end
