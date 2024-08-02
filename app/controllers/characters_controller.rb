@@ -2,9 +2,6 @@
 
 # character controller
 class CharactersController < ApplicationController
-  CHARACTER_NAME_MAPPING = {
-    'DrMario' => 'Dr. Mario'
-  }.freeze
   def index
     @characters = Character.all.order(:position)
     @characters_by_row = @characters.each_slice(9).to_a

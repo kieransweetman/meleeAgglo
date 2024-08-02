@@ -5,7 +5,7 @@
         <% row.each do |character| %>
         <% next if character.name == 'Sheik' %>
           <div id="<%= character.name %>" class="flex-grow border hover:border-red-500">
-            <a href="<%= character_path(character.name) %>" data-turbo="false">
+            <a href="<%= "characters/#{character.name}" %>" data-turbo="false">
               <%= image_tag character_image_path(character.name) %>
             </a>
           </div>

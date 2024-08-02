@@ -10,19 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_01_140852) do
+ActiveRecord::Schema[7.1].define(version: 20_240_801_140_852) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "characters", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "description"
-    t.string "icon_url"
-    t.string "css_icon_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "position"
-    t.index ["name"], name: "index_characters_on_name", unique: true
+  create_table 'characters', force: :cascade do |t|
+    t.string 'name', null: false
+    t.text 'description'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.integer 'position'
+    t.index ['name'], name: 'index_characters_on_name', unique: true
   end
-
 end
